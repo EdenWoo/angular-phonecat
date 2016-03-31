@@ -24,6 +24,7 @@ phonecatApp.config(['$routeProvider',
       }).
       when('/home/', {
         templateUrl: 'partials/home.html',
+        controller:'HomeCtrl'
       }).
       when('/register/', {
         templateUrl: 'partials/register.html',
