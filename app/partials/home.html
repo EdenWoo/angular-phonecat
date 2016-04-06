@@ -1,152 +1,97 @@
+<
 
-	<header class="zufang-header ">
-		<a id="logo" href="#/home" title="新西兰租房网lineman"></a>
-		<nav class="login">
-			<ul>
-				<li><a href="#/register" >注册</a></li>
-				<li><a href="#/login">登陆</a></li>
-				<li><a href="#" id="menu-icon"></a></li>
-			</ul>
-		</nav>
-	</header>
-
-
-	<!--搜索模块 -->
-	<div class="searchs">
-		<div class="wrapper">
-			<div class="fl" log-mod="search">
-				<div class="search-txt">
-
-					<!--输入框和搜索按钮-->
-					<form class="clear" action="#"
-						data-action="/zufang/rs" method="post">
-						<div class="search-tab">
-							<!--输入框前标签-->
-							<div data-bl="switch" class="check" formact="/zufang/rs"
-								actdata="zufang">租房</div>
-							<!--输入框-->
-							<div class="txt-serach">
-								<input class="left txt autoSuggest" name="keyword"
-								 placeholder="输入新西兰房源" id="keyword-box" ng-model="query">
-							</div>
-						</div>
-						<!--搜索按钮-->
-
-
-						<button type="submit" data-bl="search" data-el="search"
-							class="act-search btn home-ico ico-search" target="_blank"
-							daty-id="110000">搜索</button>
-					</form>
-				</div>
-			</div>
-			<div class="fr last"></div>
-		</div>
-	</div>
-	<!--＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃-->
-
-	<!-- 面包屑模块 -->
-	<div class="wrapper">
-		<div class="filter-box">
-			<div class="hd clear">
-				<ul class="tab-lst">
-					<li class="on"><a href=" "><span>奥克兰</span></a></li>
-					<li class="on"><a href=" "><span>东区</span></a></li>
-					<li class="on"><a href=" "><span>西区</span></a></li>
-					<li class="on"><a href=" "><span>南区</span></a></li>
-					<li class="on"><a href=" "><span>中区</span></a></li>
-					<li class="on"><a href=" "><span>北岸</span></a></li>
-				</ul>
-
-				<div class="info">
-					<span class="num">信息真实可靠！</span>
-				</div>
-			</div>
-
-			<div>
-				<div class="bd" id="filter-options">
-
-					<!--根据区域进行显示该区域的具体地点-->
-					<dl class="dl-lst clear">
-						<dt>区域：</dt>
-						<dd data-index="0">
-							<div class="option-list">
-								<a href=" " class="on">Auckland</a>
-							</div>
-						</dd>
-					</dl>
-
-					<dl class="dl-lst clear">
-						<dt>租金：</dt>
-						<dd data-index="1">
-							<div class="option-list">
-								<div class="custom" data-type="price">
-									<div class="txt-box">
-										<input type="text" class="txt" name="min_price" data-index="1"
-											value="">
-									</div>
-									&nbsp;-&nbsp;
-									<div class="txt-box">
-										<input type="text" class="txt" name="max_price" data-index="1"
-											value="">
-									</div>
-									&nbsp;新西兰元<input type="button" data-type="price" class="ok"
-										value="确定" style="display: none;">
-
-									<div class="checkbox"
-										style="display: inline-block; vertical-align: top; margin: 5px;">
-										<label id="label-negotiable"> <input type="checkbox"
-											id="negotiable-checkbox" checked=""> 可商
-										</label>
-									</div>
-
-								</div>
-							</div>
-						</dd>
-					</dl>
-
-					<dl class="dl-lst clear">
-						<dt>房型：</dt>
-						<dd data-index="2">
-							<div class="option-list">
-								<a href="" class="on">任意房型</a> <a href="" class="on">搭房</a> <a
-									href="" class="on">普通房</a> <a href="" class="on">主人房</a> <a
-									href="" class="on">整套</a> <a href="" class="on">其它</a>
-							</div>
-						</dd>
-					</dl>
-				</div>
-
-				<div class="filter-bar01">
-					<div class="sort-bar" id="sort-bar">
-						<span>排序：</span>
-						<select class="sort-parent on" ng-model="orderProp">
-		        		<option value="name">Alphabetical</option>
-		        		<option value="age">Newest</option>
-		      			</select>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<!--＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃-->
-	<!--房源数数据列表-->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <ul class="phones">
-        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
-            class="thumbnail phone-listing">
-          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"></a>
-          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
-        </li>
-      </ul>
-
+<!--Navigation bar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+   <!--Navigation bar header-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
     </div>
+    <!--Navigation bar collapse area-->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/home">首页</a></li>
+        <li><a href="#/register">登录</a></li>
+        <li><a href="#/login">注册</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">更多
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Link4</a></li>
+            <li><a href="#">Link5</a></li>
+            <li><a href="#">Link6</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 40px;height: 300px"> 
+  <ul class="list-group col-xs-12 col-sm-12" style="margin-top: 10px">
+    <li class="list-group-item">
+        区域：不限 东城 西城 朝阳 海淀 丰台 石景山 通州 昌平</br></br>
+        租金：不限 1500元以下 1500-2500元 2500-3500元 3500-4500元 4500-5500元</br></br>
+        面积：不限 30平以下 30-50平 50-70平 70-90平 90-120平 120-140平 140-160平 160-200平 200平以上</br></br>
+        房型：不限 一室 二室 三室 四室 五室 五室以上
+    </li>
+
+    <li class="list-group-item">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-1">排序:</label>
+          <div class="col-sm-6">
+              <select class="form-control" name="category" ng-model="orderProp">
+                  <option value="age">最新</option>
+                  <option value="name">租金低</option>
+                  <option value="name">面积</option>
+              </select>
+            </div>
+          </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1">搜索:</label>
+          <div class="col-sm-6">          
+            <input ng-model="query" type="text" class="form-control" placeholder="输入搜索内容" aria-describedby="basic-addon2">
+          </div>
+        </div>
+      </form>
+    </li>    
+  </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+          <div class="panel panel-default">
+                 <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+                        <div class="col-xs-12 col-sm-3">
+                            <img height="40px" class="media-object img-rounded img-responsive"  ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" >
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                           </br>
+                            <h2><a href="#/phones/{{phone.id}}">{{phone.name}}</a></h2></br>
+                            <h3>{{phone.snippet}}</h3></br>
+                            
+                        </div>
+
+                        <div class="col-xs-12 col-md-3">
+                            </br> 
+                            <h2>6500元/月</h2></br>
+                            <h4>2016.03.27 更新</h4></br>
+                            <h4>15人看过此房</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
+          </div>
+      </div>
   </div>
 </div>
 
+</div>

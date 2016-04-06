@@ -33,6 +33,6 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/login.html',
       }).
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/home'
       });
   }]);
