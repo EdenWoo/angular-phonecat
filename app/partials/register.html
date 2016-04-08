@@ -1,78 +1,39 @@
-<form class="form-horizontal">
-<fieldset>
+<div class="container">
+    <div class="row">
+        <div class='col-md-3'></div>
+        <div class="col-md-6">
+            <div class="login-box well">
+                    <form action="">
+                        <legend class="text-center">Register</legend>
+                        
+                        <div class="form-group">
+                            <label for="username-email">E-mail or Username</label>
+                            <input value='' id="username-email" placeholder="E-mail or Username" type="text" class="form-control" />
+                        </div>
 
-<!-- Form Name -->
-<legend>Sign Up For Free Account</legend>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" value='' placeholder="Password" type="text" class="form-control" />
+                        </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Company Name">Company Name</label>  
-  <div class="col-md-6">
-  <input id="Company Name" name="Company Name" type="text" placeholder="Company Name" class="form-control input-md" required="">
-    
-  </div>
+                        <div class="form-group">
+                            <label for="password">Repeat Password</label>
+                            <input id="password" value='' placeholder=" Repeat Password" type="text" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Create an account" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <p class="text-center m-t-xs text-sm">Already have an account?</p> 
+                            <a href="#/signin" class="btn btn-default btn-block m-t-md">Click to login</a>
+                        </div>
+                        <span class='text-center'><a href="#/home" class="text-sm">Go back to Homepage</a></span>
+                    </form>
+                
+            </div>
+        </div>
+        <div class='col-md-3'></div>
+    </div>
 </div>
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Address">Address</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="Address" name="Address">Address</textarea>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="User Name">User Name</label>  
-  <div class="col-md-6">
-  <input id="User Name" name="User Name" type="text" placeholder="User Name" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="User Id">User Id</label>  
-  <div class="col-md-6">
-  <input id="User Id" name="User Id" type="text" placeholder="User Id" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Mail Id ">Mail Id </label>  
-  <div class="col-md-6">
-  <input id="Mail Id " name="Mail Id " type="text" placeholder="Mail Id " class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Password input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Password">Password</label>
-  <div class="col-md-6">
-    <input id="Password" name="Password" type="password" placeholder="Password" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Password input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Password Again">Re enter Password</label>
-  <div class="col-md-6">
-    <input id="Password Again" name="Password Again" type="password" placeholder="Re enter Password" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for=""></label>
-  <div class="col-md-4">
-    <button id="" name="" class="btn btn-success">Regist</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
