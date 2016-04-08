@@ -1,54 +1,78 @@
-	<div class="user-login">
-		<div class="back">
-			<a href="#/home" class="fl">返回租房网首页</a>
-			<div class="fr">
-				已有租房网账号？<a
-					href="#/login"
-					id="actResetUrl">马上登录</a>
-			</div>
-		</div>
-		<div class="wrapper">
-			<div class="bg-image">
-				<img src="../app/img/login-bg.jpg">
-			</div>
-			<div class="logo"></div>
-			<div class="reset-pwd registerred">
-				<form
-					action="#"
-					method="post" id="registerForm">
-					<input type="hidden" name="redirect" id="r"
-						value="#">
-					<ul>
-						<li class=""><input type="text" name="mobile"
-							placeholder="请输入手机号" validate="notNull,isTel" validatename="手机号"
-							class="phonecode"><a onclick="javascript:;"
-							class="send actRegisterSMS">发送验证码</a><i>*</i></li>
-						<li><input type="text" placeholder="请输短信验证码"
-							name="verifyCode" class="actCheckVerify" validatename="短信验证码"
-							validate="notNull"><i>*</i></li>
-						<li><input type="text" name="nickName" placeholder="昵称"></li>
-						<li><input type="password" name="password" id="password"
-							placeholder="请输入密码" validate="notNull,minLength"
-							validatedata="minLength=6" validatename="密码"><i>*</i></li>
-						<li><input type="password" placeholder="请确认新密码"
-							validate="notNull,isSame" validatedata="isSame=#password"
-							validatename="确认密码"><i>*</i></li>
-						<li class="mt10"><label><input type="checkbox"
-								class="check-agreed alwayCheck" validate="isChecked"
-								validatename="租房用户使用协议">我已阅读并同意<a
-								href="#" target="_blank">《租房用户使用协议》</a></label></li>
-						<li><input type="submit" value="立即注册"
-							class="up-pwd actSubmit"></li>
-					</ul>
-				</form>
-			</div>
-		</div>
+<form class="form-horizontal">
+<fieldset>
 
-		<div class="lianjia-footer-simple">
-			xxx公司 / 许可证号<br>xxx公司保留全部权利&nbsp;
-		</div>
+<!-- Form Name -->
+<legend>Sign Up For Free Account</legend>
 
-		
-		<div id="only" data-city="login" data-page="login_register"></div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Company Name">Company Name</label>  
+  <div class="col-md-6">
+  <input id="Company Name" name="Company Name" type="text" placeholder="Company Name" class="form-control input-md" required="">
+    
+  </div>
+</div>
 
-	</div>
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Address">Address</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="Address" name="Address">Address</textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="User Name">User Name</label>  
+  <div class="col-md-6">
+  <input id="User Name" name="User Name" type="text" placeholder="User Name" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="User Id">User Id</label>  
+  <div class="col-md-6">
+  <input id="User Id" name="User Id" type="text" placeholder="User Id" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Mail Id ">Mail Id </label>  
+  <div class="col-md-6">
+  <input id="Mail Id " name="Mail Id " type="text" placeholder="Mail Id " class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Password">Password</label>
+  <div class="col-md-6">
+    <input id="Password" name="Password" type="password" placeholder="Password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Password Again">Re enter Password</label>
+  <div class="col-md-6">
+    <input id="Password Again" name="Password Again" type="password" placeholder="Re enter Password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-success">Regist</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

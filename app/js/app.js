@@ -32,6 +32,9 @@ phonecatApp.config(['$routeProvider',
       when('/login/', {
         templateUrl: 'partials/login.html',
       }).
+      when('/signin/', {
+        templateUrl: 'partials/signin.html',
+      }).
       otherwise({
         redirectTo: '/home'
       });
